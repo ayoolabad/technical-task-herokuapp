@@ -1,5 +1,6 @@
 package com.internet.herokuapp.stepDefinition;
 
+import com.internet.herokuapp.pageObject.LoginPagePO;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -10,7 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ForAuthenticationSteps {
+public class FormAuthenticationSteps {
     WebDriver driver;
     @Given("^user is on Welcome to the-internet page$")
     public void userIsOnWelcomeToTheInternetPage() {
@@ -27,21 +28,28 @@ public class ForAuthenticationSteps {
 
     @And("^user enters the \"([^\"]*)\"$")
     public void userEntersThe(String Username) throws Throwable {
-        driver.findElement(By.id("username")).sendKeys(Username);
+        //driver.findElement(By.id("username")).sendKeys(Username);
+        LoginPagePO loginPagePO = new LoginPagePO(driver);
+        loginPagePO.enterUsername(Username);
     }
 
     @And("^user enters directed \"([^\"]*)\"$")
     public void userEntersDirected(String Password) throws Throwable {
-        driver.findElement(By.id("password")).sendKeys(Password);
+        //driver.findElement(By.id("password")).sendKeys(Password);
+        LoginPagePO logInPagePO = new LoginPagePO(driver);
+        logInPagePO.enterPassword(Password);
     }
 
     @And("^user clicks on Login$")
     public void userClicksOnLogin() {
-        driver.findElement(By.cssSelector("#login > button > i")).click();
+        //driver.findElement(By.cssSelector("#login > button > i")).click();
+        LoginPagePO logInPagePO = new LoginPagePO(driver);
+        logInPagePO.clickLoginButtton();
     }
 
     @Then("^user SecureArea page is displayed\\.$")
     public void userSecureAreaPageIsDisplayed() {
+        //driver.findElement(By.cssSelector("#content > div > h2")).click();
     }
 
 }

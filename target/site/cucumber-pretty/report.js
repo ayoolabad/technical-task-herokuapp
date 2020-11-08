@@ -1,142 +1,115 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("FormAuthentication.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Login.feature");
 formatter.feature({
   "line": 2,
-  "name": "Form Authentication",
+  "name": "Log In",
   "description": "",
-  "id": "form-authentication",
+  "id": "log-in",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@FormAuthentication"
+      "name": "@Login"
     }
   ]
 });
 formatter.scenarioOutline({
   "line": 4,
-  "name": "Login",
+  "name": "Log into Account",
   "description": "",
-  "id": "form-authentication;login",
+  "id": "log-in;log-into-account",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
 });
 formatter.step({
   "line": 5,
-  "name": "user is on Welcome to the-internet page",
+  "name": "user is on Login page",
   "keyword": "Given "
 });
 formatter.step({
   "line": 6,
-  "name": "user clicks on Form Authentication",
+  "name": "user inputs the \"\u003cUsername\u003e\"",
   "keyword": "When "
 });
 formatter.step({
   "line": 7,
-  "name": "user enters the \"\u003cUsername\u003e\"",
+  "name": "user enters the \"\u003cPassword\u003e\" given",
   "keyword": "And "
 });
 formatter.step({
   "line": 8,
-  "name": "user enters directed \"\u003cPassword\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 9,
-  "name": "user clicks on Login",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 10,
-  "name": "user SecureArea page is displayed.",
+  "name": "user then clicks on Login",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 13,
+  "line": 10,
   "name": "",
   "description": "",
-  "id": "form-authentication;login;",
+  "id": "log-in;log-into-account;",
   "rows": [
     {
       "cells": [
         "Username",
         "Password"
       ],
-      "line": 14,
-      "id": "form-authentication;login;;1"
+      "line": 11,
+      "id": "log-in;log-into-account;;1"
     },
     {
       "cells": [
         "tomsmith",
         "SuperSecretPassword!"
       ],
-      "line": 15,
-      "id": "form-authentication;login;;2"
+      "line": 12,
+      "id": "log-in;log-into-account;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 15,
-  "name": "Login",
+  "line": 12,
+  "name": "Log into Account",
   "description": "",
-  "id": "form-authentication;login;;2",
+  "id": "log-in;log-into-account;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 1,
-      "name": "@FormAuthentication"
+      "name": "@Login"
     }
   ]
 });
 formatter.step({
   "line": 5,
-  "name": "user is on Welcome to the-internet page",
+  "name": "user is on Login page",
   "keyword": "Given "
 });
 formatter.step({
   "line": 6,
-  "name": "user clicks on Form Authentication",
+  "name": "user inputs the \"tomsmith\"",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "When "
 });
 formatter.step({
   "line": 7,
-  "name": "user enters the \"tomsmith\"",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "user enters directed \"SuperSecretPassword!\"",
+  "name": "user enters the \"SuperSecretPassword!\" given",
   "matchedColumns": [
     1
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 9,
-  "name": "user clicks on Login",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 10,
-  "name": "user SecureArea page is displayed.",
+  "line": 8,
+  "name": "user then clicks on Login",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "ForAuthenticationSteps.userIsOnWelcomeToTheInternetPage()"
+  "location": "LoginSteps.userIsOnLoginPage()"
 });
 formatter.result({
-  "duration": 5784742545,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ForAuthenticationSteps.userClicksOnFormAuthentication()"
-});
-formatter.result({
-  "duration": 579140373,
+  "duration": 6451312213,
   "status": "passed"
 });
 formatter.match({
@@ -146,37 +119,30 @@ formatter.match({
       "offset": 17
     }
   ],
-  "location": "ForAuthenticationSteps.userEntersThe(String)"
+  "location": "LoginSteps.userInputsThe(String)"
 });
 formatter.result({
-  "duration": 173142397,
+  "duration": 197726275,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "SuperSecretPassword!",
-      "offset": 22
+      "offset": 17
     }
   ],
-  "location": "ForAuthenticationSteps.userEntersDirected(String)"
+  "location": "LoginSteps.userEntersTheGiven(String)"
 });
 formatter.result({
-  "duration": 125741570,
+  "duration": 120475295,
   "status": "passed"
 });
 formatter.match({
-  "location": "ForAuthenticationSteps.userClicksOnLogin()"
+  "location": "LoginSteps.userThenClicksOnLogin()"
 });
 formatter.result({
-  "duration": 410707316,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ForAuthenticationSteps.userSecureAreaPageIsDisplayed()"
-});
-formatter.result({
-  "duration": 29481,
+  "duration": 381627225,
   "status": "passed"
 });
 });
