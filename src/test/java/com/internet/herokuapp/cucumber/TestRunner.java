@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/Features",
         glue = {"com.internet.herokuapp.stepDefinition"},
         format = {"pretty", "html:target/site/cucumber-pretty"},
-        tags = {"@Login"}
+        tags = {"@JavaScriptAlerts"}
 )
 public class TestRunner {
 }

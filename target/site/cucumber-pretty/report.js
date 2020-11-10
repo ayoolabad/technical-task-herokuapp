@@ -1,148 +1,83 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("JavaScriptAlerts.feature");
 formatter.feature({
   "line": 2,
-  "name": "Log In",
+  "name": "JavaScriptAlerts",
   "description": "",
-  "id": "log-in",
+  "id": "javascriptalerts",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@Login"
+      "name": "@JavaScriptAlerts"
     }
   ]
-});
-formatter.scenarioOutline({
-  "line": 4,
-  "name": "Log into Account",
-  "description": "",
-  "id": "log-in;log-into-account",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 5,
-  "name": "user is on Login page",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "user inputs the \"\u003cUsername\u003e\"",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 7,
-  "name": "user enters the \"\u003cPassword\u003e\" given",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 8,
-  "name": "user then clicks on Login",
-  "keyword": "Then "
-});
-formatter.examples({
-  "line": 10,
-  "name": "",
-  "description": "",
-  "id": "log-in;log-into-account;",
-  "rows": [
-    {
-      "cells": [
-        "Username",
-        "Password"
-      ],
-      "line": 11,
-      "id": "log-in;log-into-account;;1"
-    },
-    {
-      "cells": [
-        "tomsmith",
-        "SuperSecretPassword!"
-      ],
-      "line": 12,
-      "id": "log-in;log-into-account;;2"
-    }
-  ],
-  "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 12,
-  "name": "Log into Account",
+  "line": 3,
+  "name": "Relevant message appears",
   "description": "",
-  "id": "log-in;log-into-account;;2",
+  "id": "javascriptalerts;relevant-message-appears",
   "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 1,
-      "name": "@Login"
-    }
-  ]
+  "keyword": "Scenario"
 });
 formatter.step({
-  "line": 5,
-  "name": "user is on Login page",
+  "line": 4,
+  "name": "user is on that Welcome to the-internet page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
-  "name": "user inputs the \"tomsmith\"",
-  "matchedColumns": [
-    0
-  ],
+  "line": 5,
+  "name": "user clicks the JavaScript Alerts",
   "keyword": "When "
 });
 formatter.step({
+  "line": 6,
+  "name": "user clicks on Click for JS Confirm",
+  "keyword": "And "
+});
+formatter.step({
   "line": 7,
-  "name": "user enters the \"SuperSecretPassword!\" given",
-  "matchedColumns": [
-    1
-  ],
+  "name": "user clicks ok",
   "keyword": "And "
 });
 formatter.step({
   "line": 8,
-  "name": "user then clicks on Login",
+  "name": "relevant message appears",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginSteps.userIsOnLoginPage()"
+  "location": "JavaScriptAlertsSteps.userIsOnThatWelcomeToTheInternetPage()"
 });
 formatter.result({
-  "duration": 6451312213,
+  "duration": 5868067416,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "tomsmith",
-      "offset": 17
-    }
-  ],
-  "location": "LoginSteps.userInputsThe(String)"
+  "location": "JavaScriptAlertsSteps.userClicksTheJavaScriptAlerts()"
 });
 formatter.result({
-  "duration": 197726275,
+  "duration": 322229342,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "SuperSecretPassword!",
-      "offset": 17
-    }
-  ],
-  "location": "LoginSteps.userEntersTheGiven(String)"
+  "location": "JavaScriptAlertsSteps.userClicksOnClickForJSConfirm()"
 });
 formatter.result({
-  "duration": 120475295,
+  "duration": 105039049,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSteps.userThenClicksOnLogin()"
+  "location": "JavaScriptAlertsSteps.userClicksOk()"
 });
 formatter.result({
-  "duration": 381627225,
+  "duration": 15120209,
+  "status": "passed"
+});
+formatter.match({
+  "location": "JavaScriptAlertsSteps.relevantMessageAppears()"
+});
+formatter.result({
+  "duration": 33364,
   "status": "passed"
 });
 });
