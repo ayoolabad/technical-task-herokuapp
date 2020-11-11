@@ -7,6 +7,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -49,7 +50,8 @@ public class FormAuthenticationSteps {
 
     @Then("^user SecureArea page is displayed\\.$")
     public void userSecureAreaPageIsDisplayed() {
-        //driver.findElement(By.cssSelector("#content > div > h2")).click();
+        String expectedResult = driver.findElement(By.cssSelector("#content > div > h2")).getText();
+        Assert.assertEquals("Secure Area",expectedResult);
     }
 
 }

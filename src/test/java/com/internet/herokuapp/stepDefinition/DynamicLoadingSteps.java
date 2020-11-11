@@ -5,10 +5,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import sun.jvm.hotspot.HelloWorld;
 
 public class DynamicLoadingSteps {
     WebDriver driver;
@@ -36,6 +36,9 @@ public class DynamicLoadingSteps {
     }
 
     @Then("^Hello World! message appears\\.$")
-    public void helloWorldMessageAppears() {
+    public void helloWorldMessageAppears() throws InterruptedException {
+        Thread.sleep(5000);
+        String actualMessage = driver.findElement(By.cssSelector("#finish > h4")).getText();
+        Assert.assertEquals("Hello World!",actualMessage);
     }
 }
